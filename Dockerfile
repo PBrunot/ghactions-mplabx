@@ -47,6 +47,9 @@ RUN wget https://ww1.microchip.com/downloads/en/DeviceDoc/xc32-${XC32VER}-full-i
   ./'PIC32 Legacy Peripheral Libraries.run' --unattendedmodeui none --mode unattended --prefix /opt/microchip/xc32/${XC32VER} && \
   rm pic32Plib
 
+# Add compilers flags
+RUN echo "*cc1:+ -mafrlcsj" >/opt/microchip/xc32/${XC32VER}/lib/gcc
+
 ENV PATH $PATH:/opt/microchip/xc32/${XC32VER}/bin
 ENV PATH $PATH:/opt/microchip/mplabx/${MPLABXVER}/mplab_platform/bin  
 
