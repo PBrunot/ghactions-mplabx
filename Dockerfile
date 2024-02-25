@@ -48,7 +48,7 @@ RUN wget https://ww1.microchip.com/downloads/en/DeviceDoc/xc32-${XC32VER}-full-i
   rm pic32Plib
 
 # Add compilers flags
-RUN echo "*cc1:+ -mafrlcsj" >/opt/microchip/xc32/${XC32VER}/lib/gcc
+RUN echo "*cc1:+ -mafrlcsj" >/opt/microchip/xc32/${XC32VER}/lib/gcc/specs
 
 ENV PATH $PATH:/opt/microchip/xc32/${XC32VER}/bin
 ENV PATH $PATH:/opt/microchip/mplabx/${MPLABXVER}/mplab_platform/bin  
